@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+ 
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Online Compiler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+     <!-- font tag -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link
+         href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Mitr:wght@300&family=Montserrat:wght@100&family=Oswald:wght@300&family=Roboto:wght@300&family=Saira+Condensed:wght@100;200&family=Shadows+Into+Light&display=swap"
+         rel="stylesheet">
+     <!-- icons tag -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+         <script src="https://kit.fontawesome.com/31d0b032ff.js" crossorigin="anonymous"></script>
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">!
+
+
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- bootstrap cdn -->
+ 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- font Awesome  -->
+    <script src="https://kit.fontawesome.com/0000000000.js" crossorigin="anonymous"></script>
+
+
+  </head>
+  <body>
+
+    <style>
+      .spinnerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: #299fff;
+  animation: tri-spinner 1s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: tri-spinner 2s infinite;
+}
+
+.spinner::after {
+  margin: 8px;
+  animation-duration: 3s;
+}
+
+@keyframes tri-spinner {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.loader {
+  color: #4a4a4a;
+  font-family: "Poppins",sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 40px;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+}
+
+.words {
+  overflow: hidden;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: #299fff;
+  animation: cycle-words 5s infinite;
+}
+
+@keyframes cycle-words {
+  10% {
+    -webkit-transform: translateY(-105%);
+    transform: translateY(-105%);
+  }
+
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  35% {
+    -webkit-transform: translateY(-205%);
+    transform: translateY(-205%);
+  }
+
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
+  60% {
+    -webkit-transform: translateY(-305%);
+    transform: translateY(-305%);
+  }
+
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+
+  85% {
+    -webkit-transform: translateY(-405%);
+    transform: translateY(-405%);
+  }
+
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+
+    </style>
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label id="Homee" class="logo">Compiler Hub. </label>
+
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#Aboutt">About</a></li>
+        <li><a href="#Compilerss">Compilers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+     
+    <section class="header">
+      <h2 class="text">
+        Write, test, and debug code in various programming languages from your
+        browser.
+      </h2>
+    </section>
+  
+
+    <section class="home">
+      <div class="home-container">
+        <div class="home-text">
+          <h1 id="Compilerss" style="color:#ffffff">Experience hassle-free coding with our online compiler!</h1>
+          <p style="color:#ffffff">
+            Enjoy instant results, real-time error checking, and collaborative
+            coding. Whether you're a beginner or a seasoned developer,
+            streamline your coding workflow with our user-friendly online
+            compiler today.
+          </p>
+        </div>
+        <div class="home-img">
+          <img src="pic1.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <div class="spinnerContainer">
+      <div class="spinner"></div>
+      <div class="loader">
+        <p>Compiler</p>
+        <div class="words">
+          <span class="word">JavaScript</span>
+          <span class="word">Python</span>
+          <span class="word">C++</span>
+          <span class="word">Java</span>
+          <span class="word">Html</span>
+        </div>
+      </div>
+    </div>
+    <section class="compiler-container">
+       <!-- <div class="compiler-text"> 
+        <h1 id=" ">Compiler</h1>
+        <p>Choose One Of The Language To Run Code From Your Browser</p> -->
+</div>
+      <div class="compiler-boxes">
+        <div class="box">
+          <img src="js.png" alt="">
+          <i class="fa-solid fa-person-walking-arrow-right"></i>
+          <a href="JScodeMirror.html"> <h1>JavaScript Compiler</h1></a>
+         </div>
+
+          
+          <div class="box">
+            <img src="html.png" alt="">
+            <i class="fa-solid fa-person-walking-arrow-right"></i>
+            <a href="HtmlCodeMirror.html"> <h1>Html Compiler</h1></a>
+           </div>
+ 
+            <div class="box">
+              <img src="c++.png" alt="">
+              <i class="fa-solid fa-person-walking-arrow-right"></i>
+              <a href="c++.html"> <h1>C++ Compiler</h1></a>
+             </div>
+
+             
+              <div class="box">
+                <img src="c.png" alt="">
+                <i class="fa-solid fa-person-walking-arrow-right"></i>
+                <a href="c.html"> <h1>C Compiler</h1></a>
+               </div>
+
+
+                
+                <div class="box">
+                  <img src="java.png" alt="">
+                  <i class="fa-solid fa-person-walking-arrow-right"></i>
+                  <a href="java.html"> <h1>Java Compiler</h1></a>
+                 </div>
+
+                  
+                  <div class="box">
+                    <img src="python.png" alt="">
+                    <i class="fa-solid fa-person-walking-arrow-right"></i>
+                    <a href="python.html"> <h1>Python Compiler</h1></a>
+                   </div>
+
+                    
+                     
+
+      </div>
+
+    </section>
+    <section class="about">
+      <div id="Aboutt" class="about-con">
+        <h1>Online Compiler</h1>
+        <p>An online compiler is a web-based tool or service that allows users to write, compile, and run computer programs or code snippets in various programming languages directly from a web browser, without the need to install any software or development environments on their local computer. Online compilers are particularly useful for quick code testing, sharing code with others, or for educational purposes. Here are some key features and benefits of online compilers:</p>
+         <p>The main task of an online compiler is to make it easier for any user to build and run programs (which may be written in any language). Moreover, these programs are executed without downloading any IDE (Integrated Development Environment) or compiler. There is no requirement for a development kit on the client machine.</p>
+         <p>Using different online compilers at a single interface allows a programmer to compile and remove all errors and efficiently store the bugs' output.</p>
+
+         <h1>Working Of The Online Compiler</h1>
+       <h2>The working of an online compiler involves a combination of server-side and client-side processes. Here's a general overview of how an online compiler typically works:</h2>
+      <p>.The code undergoes the following procedure in an online compiler:</p>
+      <p>.Code is written on the code editor on the website.</p>
+        <p>.It is then sent from the webpage to the server.</p>
+        <p>.The content is saved by the server as a file.</p>
+        <p>.The file is processed as though it were a local source file.</p>
+        <p>.The result is computed and returned to the website.</p>
+
+        <h1>Benefits of using Online Compiler</h1>
+      <h2>Some benefits of using online compilers are:</h2>
+
+     
+        <p>.No Setup is needed. </p>
+        <p>.There is no need for configuration. </p>
+        <p>.The Administration is not required. </p>
+        <p>.It is accessible from any location.</p>
+        <p>.It is capable of sharing resources.</p>
+        <p>.Collaboration is possible.</p>
+        <p>.No hardware restrictions (i.e., a database's capacity is more than your local storage).</p>
+       
+      </div>
+    </section>
+ 
+                    <div class="footer"> 
+                      <div class="footer-con"> 
+                        <div class="itemss item1  "> 
+                      <h3 style="color:#ffffff">Language Support</h3> 
+                      <p> <a href="HtmlCodeMirror.html">HTML</a> </p>
+                      <p><a href="JScodeMirror.html">JavaScript</a> </p>
+                      <p><a href="python.html">Python</a> </p>
+                      <p> <a href="c++.html">C++</a> </p>
+                      <p> <a href="c.html">C</a> </p>
+                      <p> <a href="java.html">Java</a> </p>
+                        </div>
+                       
+                  
+
+                  <!-- <div class="col-sm-6 col-md-3 border   boxx"> -->
+                      <div class="itemss item2  "> 
+                    <h3 style="color:#ffffff">UseFull Links</h3>
+                           <p> <a href="#Homee">Home</a> </p>
+                           <p> <a href="#Aboutt">About</a> </p>
+                           <p><a href="#">FeedBack</a> </p>
+                           <p> <a href="#Compilerss">Compilers</a> </p>
+                           <p> <a href="#">Contact</a> </p>
+                         </div>
+
+                      
+                    <div class="itemss item3"> <h3 style="color:#ffffff">Coding Hub.</h3>
+                      <p style="color:#ffffff">It Sis a web service that compiles and runs your code on their server in a sandboxed environment. It is simple to use with a working internet connection and web browser.</p>
+                  </div>
+                </div>
+
+                 <div class="social "><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-linkedin"></i></a><a href="#"> <i class="fa-brands fa-instagram"></i></a></div>  
+                 
+                </div>
+                 <p class="copyright"   ><center> Coding Hub © 2018</center></p>
+                 
+                </div>
+           
+         
+      
+
+    <!-- footer -->
+    <!-- <div class="footer-dark">
+      <footer>
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-6 col-md-3 item">
+                      <h3>Language Support</h3>
+                      <ul>
+                          <li><a href="http://192.168.100.6:5501/HtmlCodeMirror.html">HTML</a></li>
+                          <li><a href="http://192.168.100.6:5501/JScodeMirror.html">JavaScript</a></li>
+                          <li><a href="http://192.168.100.5:5501/python.html">Python</a></li>
+                          <li><a href="http://192.168.100.5:5501/c++.html">C++</a></li>
+                          <li><a href="http://192.168.100.5:5501/c.html">C</a></li>
+                          <li><a href="http://192.168.100.5:5501/java.html">Java</a></li>
+
+                           
+                      </ul>
+                  </div>
+                  <div class="col-sm-6 col-md-3 item">
+                      <h3>UseFull Links</h3>
+                      <ul>
+                          <li><a href="#Homee">Home</a></li>
+                          <li><a href="#Aboutt">About</a></li>
+                          <li><a href="#">FeedBack</a></li>
+                          <li><a href="#Compilerss">Compilers</a></li>
+                          <li><a href="#">Contact</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-6 item text">
+                      <h3>Coding Hub.</h3>
+                      <p>It Sis a web service that compiles and runs your code on their server in a sandboxed environment. It is simple to use with a working internet connection and web browser.</p>
+                  </div>
+                  <div class="col item social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-linkedin"></i></a><a href="#"> <i class="fa-brands fa-instagram"></i></a></div>
+              </div>
+              <p class="copyright">Company Name © 2018</p>
+          </div>
+      </footer> -->
+  <!-- </div> -->
+  </body>
+</html>
